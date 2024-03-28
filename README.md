@@ -1,6 +1,6 @@
-# TernyLM
+# BitGrok
 
-LLM built using ternary {-1, 0, 1} weights
+Grok inspired model using ternary {-1, 0, 1} weights
 
 ## Inspiration
 
