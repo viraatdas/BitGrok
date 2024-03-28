@@ -4,7 +4,7 @@ Grok inspired model using ternary {-1, 0, 1} weights
 
 ## What?
 
-1. Grok inspired model using ternary weights
+1. Grok inspired model using 1 bit weights
 
 ## Inspiration
 
