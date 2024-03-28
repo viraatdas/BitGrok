@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "00a8420a6c77d4729ea47dc4c9a5033f9d6ae3314e04daf64a1a305981180886"
+            "sha256": "150b0df9eca516685557efa278c4dabc8ee258579e343fe58b065d4a8c1e6e35"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -31,6 +31,14 @@
             ],
             "markers": "python_version >= '3.9'",
             "version": "==0.1.86"
+        },
+        "dm-haiku": {
+            "hashes": [
+                "sha256:7448a43a6486bff95253f84e18eacc607d9c1256592573117a9d1d23e2780706",
+                "sha256:ba0b3acf71433156737fe342c486da11727e5e6c9e054245f4f9b8f0b53eb608"
+            ],
+            "index": "pypi",
+            "version": "==0.0.12"
         },
         "etils": {
             "extras": [
@@ -99,6 +107,13 @@
             ],
             "markers": "python_version >= '3.9'",
             "version": "==0.4.25"
+        },
+        "jmp": {
+            "hashes": [
+                "sha256:5dfeb0fd7c7a9f72a70fff0aab9d0cbfae32a809c02f4037ff3485ceb33e1730",
+                "sha256:6aa7adbddf2bd574b28c7faf6e81a735eb11f53386447896909c6968dc36807d"
+            ],
+            "version": "==0.0.4"
         },
         "markdown-it-py": {
             "hashes": [
@@ -395,6 +410,14 @@
             ],
             "markers": "python_version >= '3.9'",
             "version": "==1.12.0"
+        },
+        "tabulate": {
+            "hashes": [
+                "sha256:0095b12bf5966de529c0feb1fa08671671b3368eec77d7ef7ab114be2c068b3c",
+                "sha256:024ca478df22e9340661486f85298cff5f6dcdba14f3813e8830015b9ed1948f"
+            ],
+            "markers": "python_version >= '3.7'",
+            "version": "==0.9.0"
         },
         "tensorstore": {
             "hashes": [
