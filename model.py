@@ -21,9 +21,22 @@ rank_logger = logging.getLogger("rank")
 
 
 @dataclass
-class QuantizedWeight8bit:
-    weight: jnp.array
-    scales: jnp.array
+class QuantizedWeight1bit:
+    weight: jnp.array  # Original full-precision weight values
+    scale: jnp.array   # Scaling factors for the quantized weights
+
+    @property
+    def quantized_weight(self):
+        # Compute gamma (γ), which is the average absolute value of the weights
+        gamma = jnp.mean(jnp.abs(self.weight))
+
+        # Quantize the weights using the RoundClip function as described
+        # Add a small epsilon to avoid division by zero
+        epsilon = 1e-8
+        W_scaled = self.weight / (gamma + epsilon)
+        W_quantized = jnp.clip(jnp.round(W_scaled), -1, 1)
+
+        return QuantizedWeight1bit(weight=W_quantized, scale=gamma)
 
     @property
     def shape(self):
@@ -31,9 +44,9 @@ class QuantizedWeight8bit:
 
 
 tree_util.register_pytree_node(
-    QuantizedWeight8bit,
+    QuantizedWeight1bit,
     lambda qw: ([qw.weight, qw.scales], ()),
-    lambda _, children: QuantizedWeight8bit(children[0], children[1]),
+    lambda _, children: QuantizedWeight1bit(children[0], children[1]),
 )
 
 
