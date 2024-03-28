@@ -6,12 +6,6 @@ from runners import InferenceRunner, ModelRunner, sample_from_model
 
 CKPT_PATH = "./checkpoints/"
 
-# Original Grok model saves the checkpoints in the 8 bit
-# weight:
-# https://github.com/xai-org/grok-1/tree/main?tab=readme-ov-file#downloading-the-weights
-
-# This method converts the 8 bit weight to 1 bit weight
-
 
 def main():
     grok_1_model = LanguageModelConfig(
