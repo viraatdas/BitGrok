@@ -42,7 +42,6 @@ class QuantizedWeight1bit:
     def shape(self):
         return self.weight.shape
 
-
 tree_util.register_pytree_node(
     QuantizedWeight1bit,
     lambda qw: ([qw.weight, qw.scales], ()),
