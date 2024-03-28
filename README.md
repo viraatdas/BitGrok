@@ -2,6 +2,10 @@
 
 Grok inspired model using ternary {-1, 0, 1} weights
 
+## What?
+
+1. Grok inspired model using ternary weights
+
 ## Inspiration
 
 1. [The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits](https://arxiv.org/abs/2402.17764)
