@@ -1,6 +1,6 @@
 # BitGrok
 
-Grok inspired model using ternary {-1, 0, 1} weights.
+Grok-1 inspired model using ternary {-1, 0, 1} weights.
 
 A lot of the implementation currently has been taken from the Grok implementation. The main change is the exchange of the quantized 8 bit weight to a quantized 1 bit weight.
 
